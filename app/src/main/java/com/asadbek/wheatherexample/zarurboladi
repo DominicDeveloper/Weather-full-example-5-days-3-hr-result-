@@ -1,0 +1,51 @@
+Bilishingiz kerak bo`lgan narsalar ro`yxati
+
+lat va lon - joylashuv
+appid - akkaunt ochganingizda api key beradi shu manoni beradi
+units - o`lchov birliklari
+mode - defaultda json formatda
+cnt - api javobidan qaytadigan vaqt
+
+cod - ichki parametr
+message - ichki parametr
+list(ForSimpleList):
+     dt - Prognoz qilingan ma`lumotlar vaqti, unix UTC
+     main(MainObj):
+         temp - Harorat, Standart birlik sifatida(Kelvin,Metrik,Selsiy,imperial)
+         feels like - Bu harorat parametri insonning ob-havoni his qilishini hisobga olinishi
+         temp min - minimal harorat(katta megapolislar va shaharlarda)
+         temp max - maksimal harorat(katta megapolislar va shaharlarda)
+         pressure - Dengiz sathidan atmosfera bosimi, hPa da
+         humidity - namlik % foyzda
+         temp kf - Ichki parametr
+     weather:
+         id - Ob-havo holati identifikatori
+         main - Ob-havo paramterlari guruhi(yomg`ir,qor,bulutlar va boshqalar)
+         description - ob-havo sharoiti haqida.
+         icon - ob-havo belgisi identifikatori
+     clouds:
+         all - Bulutlik % foyzda
+     wind:
+         speed - Shamoz tezligi (metr.sek yoki mil/soat)
+         deg - shamol yo`nalishi darajalari (meteorologik)
+         gust - Shamol metr/sek
+     visibility - O`rtacha ko`rish, metrda Ko`rishning maksimal qiymatini bildiradi
+     pop - Yog`ingarchilik ehtimoli, Paramterning qiymati 0 dan 1 gacha o`zgaradi, bu yerda 0 0% ga, 1 100% ga teng
+     rain:
+          3h - Oxirgi 3 soat davomida yomg`ir miqdori, mm. faqat millimetr o`lchovida keladi
+     snow:
+          3h - bu dasturda yo`q lekin api da bor, qor miqdori
+     sys:
+          pod - Kuning bir qismi n - kecha, d - kunduz
+     dt_txt - Prognoz qilingan vaqt, ISO, UTC
+city:
+    id - Shahar identifikatori
+    name - shahar nomi
+    coord:
+         lat - kenglik
+         lon - uzunlik
+    country - Mamlakat kodi
+    population - Shahar aholisi
+    timezone - UTC vaqti
+    sunrise - quyosh chiqish vaqti
+    sunset - quyosh boyish vaqti
